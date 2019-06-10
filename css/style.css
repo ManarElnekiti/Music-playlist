@@ -1,0 +1,410 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+}
+
+body {
+	margin: 0 auto;
+	padding: 0;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 20px;
+    color: #151D2A;
+}
+
+h1,
+h6{ 
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+/************** 
+    HEADER 
+*************/
+.wrapper{
+    width: 96% ; 
+    max-width: 1200px ;
+    margin: 0 auto ;
+    padding: 0 2% ;
+}
+
+#main-banner{
+    position: relative;
+    width:100%;
+    margin: 0px auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+    background: #5C748C;
+    height: 100px;
+    
+}
+
+#main-banner:after {
+    background: linear-gradient(45deg, #161F2C 16px, transparent 0), 
+                linear-gradient(-45deg, #161F2C 16px, transparent 0);
+    background-position: left-bottom;
+    background-repeat: repeat-x;
+    background-size: 32px 32px;
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 25px;
+}
+
+#title{
+    width:100%;
+    padding-top:15px 
+}
+
+#title h1, #title h6{
+    color: #151D2A;
+    text-align: center;
+}
+
+.pink{
+    color: #ED88A6;
+}
+
+/***************************
+    PLAY ALL SONGS CONTAINER
+***************************/
+#container{
+    width:100%;
+    margin:0 auto 0;
+    padding-top:50px;
+    padding-bottom:50px;
+    height:auto;
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+#audio-player{
+    width:50%;
+	background:#fff;
+	margin:10px auto;
+	border-radius:10px;
+    border:1px solid #90b0c9;
+    text-align: center;
+    box-shadow: 0 0 .5em rgba(250, 253, 255, 0.8);
+    position: relative;
+}
+
+#audio-title {
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 5px;
+    padding-top: 10px;
+}
+
+#song-title-duration {
+    padding: 0px 0px 12px 0px;
+    position: relative;     
+    overflow: hidden;
+}
+
+.playing {
+    animation: animateTitle 5s linear infinite;
+}
+
+@keyframes animateTitle {
+    0% {
+        margin-right: 0;
+    }
+
+    100% {
+        margin-left: -100%;
+    }
+}
+
+button {
+    border: none;
+}
+
+#player {
+    padding: 15px;
+}
+
+#buttons {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center
+}
+
+button#play {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid #A7C0D4;
+    margin: 0 5px 0 0;
+    background: #ffffff;
+    transition: 1s
+}
+
+button#prev, 
+button#next {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 50%;
+    margin: 0 5px 0 0;
+    background: #ffffff;
+    transition: 1s
+}
+
+button#pause{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 0 5px 0 0;
+    background: #A7C0D4;
+    transition: 1s
+}
+
+button#pause span{
+    color: #fff;
+    font-size: 28px
+}
+
+button#play span, 
+button#stop span, 
+button#prev span, 
+button#next span{
+    color: #A7C0D4;
+    font-size: 28px
+}
+
+button#play:hover, 
+button#pause:hover{
+    border: 2px solid #f7f7f7;
+    background-color: #A7C0D4;
+    cursor: pointer;
+}
+
+button#prev:hover, button#next:hover { 
+    cursor: pointer;
+}
+
+button#play:hover span, button#pause:hover{
+    color: #ffffff
+}
+
+#playlist {
+    clear: both;
+    margin-top: 10px;
+}
+
+#playlist li {
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+    overflow: hidden;
+    font-size: 14px;
+    background-color: #f6f6f6;
+    border-bottom: solid 1px #90b0c9;
+    height:50px;
+}
+
+#playlist li:last-child{
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius:8px;
+    border-bottom: none
+}
+
+#playlist li.active, 
+#playlist li:hover {
+    background: #A7C0D4;
+    color: #fff;
+}
+
+#tracker {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#progress-bar {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 10px;
+    background: #f6f6f6;
+    float: left;
+    cursor: pointer;
+    position: relative;
+    border-radius: 3px;
+}
+
+#progress {
+    position: absolute;
+    left: 0;
+    background: #A7C0D4;
+    height: 10px;
+    display: inline-block;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transition: width 0.5s;
+}
+
+#duration {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+#equalizer {
+    height: 16px;
+    width: 16px;
+    float: right;
+    position: relative;
+}
+
+#equalizer span {
+    width: 4px;
+    background: #fff;
+    margin-right: 3px;
+    display: inline-block;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes animateEqualizer {
+    0% {
+        height: 0;
+    }
+
+    50% {
+        height: 50%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+#equalizer span:nth-of-type(1) {
+    animation: animateEqualizer 1s infinite;
+    left: 0;
+}
+
+#equalizer span:nth-of-type(2) {
+    animation: animateEqualizer 0.8s infinite;
+    left: 6px;
+}
+
+#equalizer span:nth-of-type(3) {
+    animation: animateEqualizer 0.5s infinite;
+    left: 12px;
+}
+
+/************
+    footer
+***********/
+
+footer{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    background: #5C748C;
+    width: 100%; 
+    color: #111725; 
+}
+
+footer p{
+    font-size: 16px;
+}
+
+footer span{
+    color: #A7C0D4;
+}
+
+/****media queries *****/
+@media screen and (max-width:1000px){
+    #audio-player{
+        width:70%;
+        margin: 0 auto
+    }
+}
+
+@media screen and (max-width:750px){
+    #audio-player{
+        width:80%;
+        margin: 0 auto
+    }
+}
+
+
+@media screen and (max-width:600px){
+
+    #audio-player{
+        width:90%;
+        margin: 0 auto
+    }
+
+    #title h1{
+        font-size: 24px;
+    }
+
+    #title h6{
+        font-size: 16px;
+    }
+
+    footer p{
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width:450px){
+
+    #title{
+        text-align: center;
+        padding-top: 0;
+    }
+
+    #title h1{
+        font-size: 20px;
+        text-align: center
+    }
+
+    #title h6{
+        font-size: 16px;
+        text-align: center
+    }
+
+    #main-banner{
+        height: 150px;
+    }
+
+    button#play, button#pause, button#stop, button#prev, button#next{
+        width: 60px;
+        height: 60px;
+    }
+
+    #buttons #speaker-off, #buttons #speaker-on{
+        margin-top: -9px
+    }
+
+}
+
+@media screen and (max-width:350px){
+    footer p{
+        font-size: 14px
+    }
+}
+
+ 
+ 
+ 
+ 

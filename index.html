@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Playlist</title> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/icon.css" />
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <body>
+		<!-- MAIN BANNER-->
+		<div id="main-banner">
+			<div class="wrapper">
+				<div id="title">
+					<h1>Music Playlist</h1>
+					<h6><span class="icon-heart pink"></span> Listen to your heart <span  class="icon-heart pink"></span></h6>
+                </div>
+			</div>
+		</div>
+        <!-- PLAY ALL SONGS CONTAINER-->
+        <div id="container">
+            <div id="audio-player">
+                <div id="player">
+                    <div id="song-title-duration">
+                        <span id="duration"></span>
+                        <div id="audio-title"></div>
+                    </div>
+                    <div id="tracker">
+                        <div id="progress-bar" dir="ltr">
+                            <span id="progress"></span>
+                        </div>
+                    </div>
+                    <div id="buttons">
+                        <button id="prev"><span  class="icon-rewind"></span></button>
+                        <button id="play"><span  class="icon-play-1"></span></button>
+                        <button id="pause"><span class="icon-pause-outline"></span></button>
+                        <button id="next"><span  class="icon-fast-fw"></span></button>
+                    </div>
+                </div>
+                <ol id="playlist">
+                    <li data-src="song1.mp3">2CELLOS - The Godfather Theme<br/> </li>
+                    <li data-src="song2.mp3">Loreena - McKennitt<br/> </li>
+                    <li data-src="song3.mp3">Despacito - by Brooklyn Duo</li>
+                    <li data-src="song4.mp3">2CELLOS - Game of Thrones<br/></li>
+                    <li data-src="song5.mp3">2CELLOS - With Or Without You <br/> </li>
+                    <li data-src="song6.mp3">Yanni - Until the last moment</li>
+                    <li data-src="song7.mp3">Yanni - Prelude and Nostalgia</li>
+                    <li data-src="song8.mp3">Yanni - Truth of touch </li>
+                    <li data-src="song9.mp3">Yanni - Bajo El Cielo De Noviembre</li>
+                    <li data-src="song10.mp3">Yanni - Our Days <br/></li>
+                    <li data-src="song11.mp3">Yanni - Ritual de amor</li>
+                </ol>
+            </div>
+        </div>
+        <!-- FOOTER-->
+        <footer>
+            <div class="wrapper">
+                <p>© 2019 <span>Manar Elnekiti</span> All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
